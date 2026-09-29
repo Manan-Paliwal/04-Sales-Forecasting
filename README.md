@@ -1,111 +1,71 @@
-# Capstone Project 4: Sales Forecasting
+# Sales Prediction with Random Forest
+
+A regression project that explores sales prediction from historical business data using a Random Forest model.
 
 ## Objective
 
-Build a machine learning model to forecast future sales using historical sales data.
+Prepare sales data, engineer predictive features, train a regression model, and evaluate how well historical information can explain sales variation.
 
----
+## Workflow
 
-## Business Problem
+1. Data loading
+2. Data cleaning
+3. Missing-value handling
+4. Feature preparation
+5. One-hot encoding
+6. Train-test split
+7. Random Forest training
+8. Regression evaluation
+9. Business interpretation
 
-Businesses require accurate sales forecasts to improve inventory management, financial planning, and operational efficiency.
+## Model
 
-Machine learning can identify sales patterns and estimate future sales.
+**Random Forest Regressor**
 
----
+## Reported Results
 
-## Dataset
+| Metric | Value |
+|---|---:|
+| MAE | **221.52** |
+| MSE | **509,625.58** |
+| RMSE | **713.88** |
+| R² | **0.2375** |
 
-**Sales Forecasting Dataset**
+The relatively low R² indicates that the current feature set and model explain only part of the variation in sales. This is useful evidence that stronger features, time-aware validation, or different modeling approaches may be required.
 
-Target Variable: **Sales**
+## Tech Stack
 
----
-
-## Project Workflow
-
-1. Data Collection
-2. Data Cleaning
-3. Feature Engineering
-4. Train-Test Split
-5. Model Training
-6. Model Evaluation
-7. Business Insights
-
----
-
-## Data Preprocessing
-
-* Missing value handling
-* One-Hot Encoding
-* Feature preparation
-
----
-
-## Machine Learning Model
-
-* Random Forest Regressor
-
----
-
-## Model Performance
-
-| Metric   | Value         |
-| -------- | ------------- |
-| MAE      | **221.52**    |
-| MSE      | **509625.58** |
-| RMSE     | **713.88**    |
-| R² Score | **0.2375**    |
-
----
-
-## Business Insights
-
-The forecasting model can support:
-
-* Inventory planning
-* Demand forecasting
-* Sales planning
-* Business decision making
-
----
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
 
 ## Skills Demonstrated
 
-* Regression
-* Data Cleaning
-* Feature Engineering
-* Random Forest Regression
-* Model Evaluation
-* Business Analysis
+- Regression
+- Data preparation
+- Feature encoding
+- Random Forest
+- Model evaluation
+- Interpreting imperfect model performance
 
----
+## Important Limitation
 
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Jupyter Notebook
-
----
+This repository is better described as a **sales prediction baseline** than a complete forecasting system unless the evaluation explicitly preserves temporal order. Traditional random train-test splitting can overstate forecasting performance on time-dependent data.
 
 ## Future Improvements
 
-* Hyperparameter tuning
-* Feature selection
-* XGBoost Regression
-* Time-series forecasting using Prophet or ARIMA
+- Use chronological validation
+- Add lag and rolling-window features
+- Compare Gradient Boosting / XGBoost
+- Evaluate seasonality and trends
+- Compare with dedicated time-series methods
+- Perform hyperparameter optimization
 
 ---
 
-## Author
-
-**Manan Paliwal**
-
-AI & Machine Learning Student
-
-Birla Institute of Technology, Mesra
+**Author:** Manan Paliwal  
+B.Tech Computer Science Engineering — Artificial Intelligence & Machine Learning
